@@ -9,15 +9,6 @@ from scipy import stats
 import statistics
 
 with st.sidebar:
-    with open('./template/Na_normal.xlsx', "rb") as template_file:
-        template_byte = template_file.read()
-    # download template excel file
-    st.download_button(label="Click to Download Template File",
-                        data=template_byte,
-                        file_name="Na_normal.xlsx",
-                        mime='application/octet-stream')
-    # upload file
-    uploaded_file = st.file_uploader('#### **Upload your .xlsx (Excel) or .csv file:**', type=['csv','xlsx'], accept_multiple_files=False)
     
     @st.cache_data(experimental_allow_widgets=True)
     def process_file(file):
@@ -51,7 +42,7 @@ with st.sidebar:
         refreshable_day_data = day_data
         refreshable_days_name_box = days_name_box
     
-    st.image('./images/QC Constellation icon-2.png')
+
     st.info('*Developed by Hikmet Can Çubukçu, MD, MSc, EuSpLM* <hikmetcancubukcu@gmail.com>')
     
 
