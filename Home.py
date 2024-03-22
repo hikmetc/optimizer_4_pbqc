@@ -9,11 +9,7 @@ from scipy import stats
 import statistics
 
 with st.sidebar:
-    # download template excel file
-    st.download_button(label="Click to Download Template File",
-                        data=template_byte,
-                        file_name="Na_normal.xlsx",
-                        mime='application/octet-stream')
+
     # upload file
     uploaded_file = st.file_uploader('#### **Upload your .xlsx (Excel) or .csv file:**', type=['csv','xlsx'], accept_multiple_files=False)
 
